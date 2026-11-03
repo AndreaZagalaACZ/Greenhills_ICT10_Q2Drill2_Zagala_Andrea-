@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PyScript CSS -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <!-- This script tag bootstraps PyScript -->
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <title>Drill 2</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #fff0f5, #ffe4ec, #ffd6e5);
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            padding-top: 70px;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        h3 {
+            display: block;
+            width: 300px;
+            box-sizing: border-box;
+            margin: 0 auto 30px auto;
+            padding: 20px 15px;
+            background: linear-gradient(135deg, #f7a8c4, #e978a3);
+            color: white;
+            font-size: 23px;
+            font-weight: bold;
+            border: 3px solid white;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(214, 112, 147, 0.3);
+            text-shadow: 1px 2px 3px rgba(150, 50, 90, 0.2);
+        }
+
+        input[type="text"] {
+            width: 260px;
+            box-sizing: border-box;
+            padding: 14px 18px;
+            margin: 10px;
+            border: 2px solid #f4a6c1;
+            border-radius: 25px;
+            background-color: #fffafd;
+            color: #b34d78;
+            font-size: 14px;
+            outline: none;
+            box-shadow: 0 4px 10px rgba(214, 112, 147, 0.12);
+            transition: 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: #ec78a5;
+            box-shadow: 0 0 10px rgba(236, 120, 165, 0.35);
+        }
+
+        input[type="text"]::placeholder {
+            color: #d69ab2;
+        }
+
+        input[type="button"] {
+            background: linear-gradient(135deg, #f7a8c4, #e978a3);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 12px 40px;
+            margin: 15px;
+            font-size: 15px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            cursor: pointer;
+            box-shadow: 0 5px 12px rgba(214, 112, 147, 0.3);
+            transition: 0.3s ease;
+        }
+
+        input[type="button"]:hover {
+            background: linear-gradient(135deg, #ed8bb1, #dc5f91);
+            transform: translateY(-3px);
+        }
+
+        #output {
+            background-color: #fff5f8 !important;
+            color: #b34d78;
+            width: 300px;
+            min-height: 50px;
+            margin: 25px auto;
+            padding: 20px;
+            border: 2px dashed #f3a2bd;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(214, 112, 147, 0.15);
+            box-sizing: border-box;
+        }
+</style>
+</head>
+<body>
+    <h3>Add a new club member</h3>
+    <input type="text" id="first_name" placeholder="Enter your First Name"><br>
+    <input type="text" id="last_name" placeholder="Enter your Last Name"><br>
+    <input type="button" py-click="new_member" value="Enter"><br>
+    <div id="output"></div>
+    <py-script src="main.py"></py-script>
+</body>
+</html>
